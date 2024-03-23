@@ -1,0 +1,48 @@
+
+
+.header {
+    background-color: #222222;
+    position: relative;
+    
+}
+
+.header__content {
+
+    display: flex;
+    min-height: 75px;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: flex-end;
+}
+
+.logo a:first-child {
+    margin-right: 41px;
+}
+
+.menu__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 168px;
+    align-items: center;
+}
+
+#burger {
+    position: absolute;
+    left: -99999999px;
+    visibility: hidden;
+
+    &:checked ~ .menu__nav-1 {
+        
+        right: -232px;
+    }
+}
+
+
+
+
+

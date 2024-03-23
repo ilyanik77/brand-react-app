@@ -1,0 +1,42 @@
+.footer {
+    min-height: 79px;
+    background-color: #222224;
+    display: flex;
+
+}
+.footer__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__text {
+    color: #FBFBFB;
+    font-size: 16px;
+    font-family: Lato;
+}
+
+.footer__nav {
+    display: flex;
+}
+
+.footer__nav__link {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    margin-left: 7.29px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__nav__link:hover {
+    background-color: #F16D7F;
+    transition: all 0.3s;
+}
+
+.footer__nav__link:hover path{
+    transition: all 0.3s;
+    fill: #fff;
+}

@@ -1,0 +1,132 @@
+.products {
+	&__content {
+		/* padding: 24px 16px; */
+
+		&__text {
+			text-align: center;
+
+			& h2 {
+				font-family: Lato;
+				font-size: 30px;
+				line-height: 36px;
+				line-height: 100%;
+				vertical-align: Top;
+			}
+		}
+
+		&__box {
+			padding-top: 60px;
+			padding-bottom: 96px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, 360px);
+			justify-content: center;
+			gap: 30px;
+		}
+	}
+}
+
+.product__item {
+	position: relative;
+	background: #f8f8f8;
+
+	&:hover .product__card-add {
+		display: block;
+	}
+}
+
+.product__content {
+	margin: 0 16px;
+}
+
+.card-add__link {
+	width: 139px;
+	padding: 10px;
+	margin-top: 188px;
+	margin-left: 111px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	border: 2px solid #fff;
+
+	&:hover {
+		box-shadow: 0px 10px 20px 5px rgba(248, 245, 245, 0.5);
+		transform: translateY(-5px);
+	}
+
+	&:hover path {
+		color: #f16d7f;
+	}
+
+	& svg {
+		margin-right: 11px;
+	}
+
+	& p {
+		color: #fff;
+		font-size: 14px;
+		font-family: Lato;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+}
+
+.product__title {
+	margin-top: 24px;
+	font-size: 13px;
+	line-height: 16px;
+	line-height: 100%;
+	vertical-align: Top;
+	margin-bottom: 16px;
+	color: #000;
+}
+
+.product__text {
+	margin-bottom: 16px;
+	font-size: 14px;
+	line-height: 17px;
+	line-height: 100%;
+	vertical-align: Top;
+	color: #000;
+}
+
+.product__price {
+	margin-top: 18px;
+	margin-bottom: 20px;
+	color: #f16d7f;
+	font-size: 16px;
+	line-height: 19px;
+	line-height: 100%;
+	vertical-align: Top;
+}
+
+.product__card-add {
+	background-image: url(../../public/img/15.png);
+	background-size: cover;
+	width: 100%;
+	height: 420px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.button__box {
+	display: flex;
+	justify-content: center;
+}
+
+.button__link {
+	margin-top: 48px;
+	margin-bottom: 95.5px;
+	color: #ff6a6a;
+	border: 1px solid #ff6a6a;
+	padding: 15px 39px 14px 39px;
+
+	&:hover {
+		background-color: #f16d7f;
+		color: #fff;
+		transition: all 0.3s;
+	}
+}
