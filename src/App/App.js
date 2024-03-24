@@ -1,5 +1,5 @@
-import './reset.css'
-import './base.css'
+import './reset.scss'
+import './base.scss'
 
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'

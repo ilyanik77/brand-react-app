@@ -2,14 +2,14 @@ import './modalMenu.scss'
 
 const ModalMenu = () => {
 	return (
-		<nav class='menu__nav-1'>
+		<nav className='menu__nav-1'>
 			<ul>
-				<h3 class='menu__nav-1__title'>MENU</h3>
-				<li class='first'>
-					<a class='first__title' href='/#'>
+				<h3 className='menu__nav-1__title'>MENU</h3>
+				<li className='first'>
+					<a className='first__title' href='/#'>
 						MAN
 					</a>
-					<ul class='second'>
+					<ul className='second'>
 						<li>
 							<a href='/#'>Accessories</a>
 						</li>
@@ -24,11 +24,11 @@ const ModalMenu = () => {
 						</li>
 					</ul>
 				</li>
-				<li class='first'>
-					<a class='first__title' href='/#'>
+				<li className='first'>
+					<a className='first__title' href='/#'>
 						WOMAN
 					</a>
-					<ul class='second'>
+					<ul className='second'>
 						<li>
 							<a href='/#'>Accessories</a>
 						</li>
@@ -46,11 +46,11 @@ const ModalMenu = () => {
 						</li>
 					</ul>
 				</li>
-				<li class='first'>
-					<a class='first__title' href='/#'>
+				<li className='first'>
+					<a className='first__title' href='/#'>
 						KIDS
 					</a>
-					<ul class='second'>
+					<ul className='second'>
 						<li>
 							<a href='/#'>Accessories</a>
 						</li>

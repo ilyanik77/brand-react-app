@@ -130,3 +130,45 @@
 		transition: all 0.3s;
 	}
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .products {
+
+        .products__content__box {
+            
+            margin-bottom: 32px;
+            padding-bottom: 0;
+            gap: 16px;
+        }
+
+        .button__link {
+            margin-top: 0;
+            margin-bottom: 65px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .products {
+
+        .products__content__box {
+            
+            margin-bottom: 40px;
+            padding-bottom: 0;
+            gap: 16px;
+        }
+
+        .button__link {
+            margin-top: 0;
+            margin-bottom: 96px;
+        }
+
+        .products__content__text {
+
+            & p {
+                margin: 0 17px;
+                font-size: 14px;
+            }
+        }
+    }
+}

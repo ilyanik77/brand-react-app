@@ -1,8 +1,8 @@
 const Breadcrumbs = () => {
     return (
-			<section class='breadcrumbs'>
-				<div class='breadcrumbs__content container'>
-					<h3 class='breadcrumbs__content__title'>SHOPPING CART</h3>
+			<section className='breadcrumbs'>
+				<div className='breadcrumbs__content container'>
+					<h3 className='breadcrumbs__content__title'>SHOPPING CART</h3>
 				</div>
 			</section>
 		)

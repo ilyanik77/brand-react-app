@@ -1,0 +1,300 @@
+.cart {
+
+    &__content {
+        display: flex;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        min-width: 652px;
+        margin-top: 96px;
+        margin-right: 128px;
+        gap: 40px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
+
+    }
+
+    &__info {
+        width: 262px;
+        margin-left: 31px;
+    }
+
+    &__item svg {
+        margin-top: 28px;
+        height: 18px;
+        margin-right: 24px;
+    }
+
+    &__title {
+        margin-top: 22px;
+        margin-bottom: 42px;
+        color: #222;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__text {
+        margin-bottom: 6px;
+        color: #575757;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        & span {
+            color: $colorSelectText;
+        }
+    }
+
+    &__button-box {
+        margin-top: 72px;
+        margin-bottom: 128px;
+        max-height: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button-link {
+        border: 1px solid #A4A4A4;
+        padding: 16px 40px;
+        color: #000;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        &:hover {
+            background-color: $buttonHoverColor;
+            color: #fff;
+            transition: all 0.3s;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        min-width: 360px;
+        margin-top: 96px;
+
+        &-get {
+            &__title {
+                width: 100%;
+                color: #222;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                margin-bottom: 20px;
+            }
+
+            & input {
+                box-sizing: border-box;
+                width: 100%;
+                height: 45px;
+                margin-bottom: 20px;
+                padding: 0 17px;
+                color: #222;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                border: 1px solid #A4A4A4;
+            }
+
+            &__button {
+                width: 101px;
+                height: 35px;
+                color: #4A4A4A;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                border: 1px solid #A4A4A4;
+
+                &:hover {
+                    background-color: $buttonHoverColor;
+                    color: #fff;
+                    transition: all 0.3s; 
+                }
+            }
+        }
+
+        &-checkout {
+            background-color: #F5F3F3;
+            height: 214px;
+            margin-top: 57px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            
+            &__sub {
+                margin-top: 39px;
+                margin-right: 34px;
+                color: #4A4A4A;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            &__grand {
+                margin-top: 12px;
+                margin-right: 34px;
+                margin-bottom: 39px;
+                color: #222;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+
+            & a {
+                background-color: $buttonHoverColor;
+                padding: 15px 42px;
+                margin-right: 43px;
+                color: #FFF;
+                font-family: Lato;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+
+                &:hover {
+                    background-color: #E05C6E;
+                    transition: all 0.3s;
+
+                }
+            }
+
+        }
+    }
+
+     
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cart {
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            margin: 0 16px;
+        }
+
+        &__form {
+
+            margin-top: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+
+            &-checkout {
+                margin-top: 40px;
+            }
+
+            &-get__button {
+                margin-bottom: 128px;
+            }
+
+
+        }
+
+        &__items {
+            width: 100%;
+        }
+
+        &__item svg {
+            margin-left: 137px;
+        }
+
+        &__button-box {
+            justify-content: space-evenly;
+            margin-bottom: 64px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+
+    .cart {
+
+        &__content {
+            display: grid;
+            margin: 0 16px;
+            grid-template-columns: 1fr;
+        }
+
+        &__form {
+
+            margin-top: 0;
+           
+
+            &-checkout {
+                margin-top: 40px;
+            }
+
+            &-get__button {
+                margin-bottom: 128px;
+            }
+
+
+        }
+
+        &__items {
+            min-width: 358px;
+            margin-right: 0;
+            margin-top: 39px;
+            
+        }
+
+        &__item {
+            min-width: 358px;
+            min-height: 188px;
+        }
+
+        &__item img {
+            
+            min-width: 143px;
+        }
+
+        &__title {
+            font-size: 16px;
+            margin-top: 13px;
+            margin-bottom: 25px;
+        }
+
+        &__text {
+            margin-bottom: 4px;
+            font-size: 14px;
+    
+        }
+
+        &__form-get {
+            height: 272px;
+        }
+
+        &__button-box {
+            justify-content: space-evenly;
+            margin-bottom: 64px;
+        }
+
+        &__button-link {
+            
+            font-size: 12px;
+            font-weight: 400;
+            padding: 9px 18px;
+        }
+    }
+}

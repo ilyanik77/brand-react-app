@@ -33,16 +33,43 @@
 
 #burger {
     position: absolute;
-    left: -99999999px;
     visibility: hidden;
 
     &:checked ~ .menu__nav-1 {
-        
-        right: -232px;
+        opacity: 1;
+        pointer-events: all;
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    .header {
 
+        &__content {
+            margin: 0 32px;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        max-width: 375px;
+    }
+
+    .header {
+
+        &__content {
+            margin: 0 16px;
+        }
+    
+        .menu__nav {
+            flex-direction: row-reverse;
+    
+            &__link {
+                display: none;
+            }
+        }
+    }
+}
 
 
 

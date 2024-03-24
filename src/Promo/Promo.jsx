@@ -1,12 +1,12 @@
-import './promo.css'
+import './promo.scss'
 
 const Promo = () => {
     return (
-			<section class='promo'>
-				<div class='promo__content container'>
+			<section className='promo'>
+				<div className='promo__content container'>
 					<img src='img/Layer_57-removebg-preview 1.png' alt='Layer_57' />
 
-					<div class='promo-right__title'>
+					<div className='promo-right__title'>
 						<h1>THE BRAND</h1>
 						<h2>
 							OF LUXERIOUS <span>FASHION</span>

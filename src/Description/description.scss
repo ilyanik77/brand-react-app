@@ -1,0 +1,207 @@
+.description {
+    display: flex;
+    width: 100vw;
+
+    .dashicons-arrow {
+        margin-top: 373px;
+        padding: 8px;
+        background-color: #ddd7d7;
+        width: 47px;
+        height: 47px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__img {
+            margin-top: 11px;
+            margin-bottom: 42px;
+            align-items: center;
+        }
+    }
+
+    &__product {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h4 {
+            margin-top: 65px;
+            margin-bottom: 12px;
+            color: #F16D7F;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        & h3 {
+
+            margin-top: 12px;
+            margin-bottom: 48px;
+            color: #4D4D4D;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__text {
+
+            width: 555px;
+            color: #5E5E5E;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        &__price {
+
+            margin-top: 32px;
+            margin-bottom: 65px;
+            color: #EF5B70;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
+        & .sort {
+            margin-top: 65px;
+        }
+    }
+
+    &__product-box {
+
+        .product__title {
+            font-family: Lato;
+            font-size: 13px;
+            line-height: 16px;
+            line-height: 100%;
+            vertical-align: Top;
+            margin-top: 23px;
+            margin-bottom: 16px;
+            color: $colorText;
+        
+        }
+        
+        .product__text {
+            margin-bottom: 16px;
+            font-family: Lato;
+            font-style: Light;
+            font-size: 14px;
+            line-height: 17px;
+            line-height: 100%;
+            vertical-align: Top;
+            color: $colorText;
+        
+        }
+        
+        .product__price {
+            color: #F16D7F;
+            font-family: Lato;
+            font-style: Regular;
+            font-size: 16px;
+            line-height: 19px;
+            line-height: 100%;
+            vertical-align: Top;
+        
+        }
+    }
+
+    &__button {
+
+        display: flex;
+        margin-top: 48px;
+        margin-bottom: 64px;
+
+        &__link {
+            width: 212px;
+            height: 49px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $buttonHoverColor;
+            border: 2px solid $buttonHoverColor;
+
+            & svg {
+                color: $buttonHoverColor;
+                margin-right: 23px;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: $buttonHoverColor;
+            }
+
+            &:hover path {
+                fill: #fff;
+            }
+        }
+        
+    }
+
+    &__product-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 128px;
+        margin-bottom: 128px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .description {
+
+        &__product-box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 128px;
+            margin-bottom: 128px;
+        }
+
+        .product__item:last-child {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        max-width: 375px;
+    }
+
+    .description {
+
+        .dashicons-arrow {
+            margin-top: 203px;
+            min-width: 31px;
+        }
+
+        &__product-box {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 128px;
+            margin-bottom: 128px;
+        }
+
+        .product__item:last-child {
+            display: none;
+
+        }
+
+        &__product__text {
+
+            max-width: 326px;
+        }
+    }
+
+
+}

@@ -1,17 +1,17 @@
-import './subscribe.css'
+import './subscribe.scss'
 
 const Subscribe = () => {
     return (
-			<section class='subscribe'>
-				<div class='subscribe__content container'>
-					<div class='info'>
+			<section className='subscribe'>
+				<div className='subscribe__content container'>
+					<div className='info'>
 						<img src='img/Layer 40.png' alt='Layer 40' />
-						<p class='info__text'>
+						<p className='info__text'>
 							“Vestibulum quis porttitor dui! Quisque
 							<br /> viverra nunc mi, a pulvinar purus condimentum“
 						</p>
 					</div>
-					<div class='rigth'>
+					<div className='rigth'>
 						<h3>
 							SUBSCRIBE
 							<br />
@@ -19,7 +19,7 @@ const Subscribe = () => {
 							{/* style='font-size: 20px;font-weight: 500;' */}
 						</h3>
 
-						<div class='box'>
+						<div className='box'>
 							<form action='#'>
 								<p>
 									<input type='email' placeholder='Enter Your Email' />

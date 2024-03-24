@@ -40,3 +40,43 @@
     transition: all 0.3s;
     fill: #fff;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer {
+
+        &__text {
+            margin-left: 32px;
+        }
+
+        &__nav {
+            margin-right: 32px;
+        }
+         
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        max-width: 375px;
+    }
+
+    .footer {
+
+        min-height: 143px;
+
+        &__content {
+            flex-direction: column-reverse;
+        }
+
+        &__nav {
+            margin-top: 43px;
+            margin-bottom: 33px;
+        }
+
+        &__text {
+            margin-bottom: 24px;
+        }
+
+        
+    }
+}

@@ -1,13 +1,13 @@
-import './offer.css'
+import './offer.scss'
 
 const Offer = () => {
     return ( 
-        <section class="offer container">
+        <section className="offer container">
 
             
-            <div class="content__item">
+            <div className="content__item">
                 <img src="img/for women.png" alt="for women" />
-                <div class="content__item__desc">
+                <div className="content__item__desc">
                     <p>
                         30% OFF 
                     </p>
@@ -16,9 +16,9 @@ const Offer = () => {
                     </h3>
                 </div>
             </div>
-            <div class="content__item">
+            <div className="content__item">
                 <img src="img/for men.png" alt="for men" />
-                <div class="content__item__desc">
+                <div className="content__item__desc">
                     <p>
                         HOT DEAL 
                     </p>
@@ -27,9 +27,9 @@ const Offer = () => {
                     </h3>
                 </div>
             </div>
-            <div class="content__item">
+            <div className="content__item">
                 <img src="img/for kids.png" alt="for kids" />
-                <div class="content__item__desc">
+                <div className="content__item__desc">
                     <p>
                         NEW ARRIVALS
                     </p>
@@ -38,9 +38,9 @@ const Offer = () => {
                     </h3>
                 </div>
             </div>
-            <div class="content__item__big">
+            <div className="content__item__big">
                 <img src="img/accesories.png" alt="accesories" />
-                <div class="content__item__desc__big">
+                <div className="content__item__desc__big">
                     <p>
                         LUXIROUS & TRENDY 
                     </p>
