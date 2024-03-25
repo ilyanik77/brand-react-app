@@ -3,7 +3,7 @@ import Search from '../components/Search'
 import ModalMenu from '../components/ModalMenu/ModalMenu'
 import './header.scss'
 import Burger from '../components/Burger'
-import Registration from '../components/ModalMenu/Registration'
+import RegistrationLink from '../components/RegistrationLink'
 import CartLink from '../components/CartLink'
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
 				<div className='menu__nav'>
 					<Burger />
 					<ModalMenu />
-					<Registration />
+					<RegistrationLink />
 					<CartLink />
 				</div>
 			</div>

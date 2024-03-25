@@ -1,3 +1,5 @@
+import './cart.scss'
+
 const Cart = () => {
     return (
 			<section className='cart'>
@@ -7,7 +9,7 @@ const Cart = () => {
 							<img width='262px' src='img/product3.png' alt='product3' />
 							<div className='cart__info'>
 								<h3 className='cart__title'>
-									MANGO PEOPLE <br>T-SHIRT</br>
+									MANGO PEOPLE <br/>T-SHIRT
 								</h3>
 								<p className='cart__text'>
 									Price: <span>$300</span>

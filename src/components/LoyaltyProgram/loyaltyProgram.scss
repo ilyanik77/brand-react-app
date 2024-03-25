@@ -1,0 +1,70 @@
+.registration__perks {
+	grid-column: 6 / 13;
+
+	&__title {
+		margin-top: 64px;
+		margin-bottom: 22px;
+		color: #000;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+
+	&__text {
+		margin-bottom: 21px;
+		color: #000;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+	}
+
+	&__li {
+		list-style-type: none;
+		margin-bottom: 16px;
+		color: #000;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: normal;
+
+		& img {
+			margin-right: 23px;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.registration__perks {
+		grid-column: 7/13;
+
+		&__title {
+			margin-bottom: 32px;
+		}
+
+		&__text {
+			margin-bottom: 22px;
+			font-size: 16px;
+		}
+
+		&__li {
+			margin-bottom: 16px;
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        max-width: 375px;
+    }
+
+	.registration__perks {
+		margin-bottom: 100px;
+
+		&__title {
+			margin-top: 40px;
+		}
+	}
+}

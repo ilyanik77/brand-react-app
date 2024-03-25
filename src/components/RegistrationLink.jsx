@@ -1,4 +1,4 @@
-const Registration = () => {
+const RegistrationLink = () => {
 	return (
 		<>
 			<a href='/#'>
@@ -8,4 +8,4 @@ const Registration = () => {
 	)
 }
 
-export default Registration
+export default RegistrationLink

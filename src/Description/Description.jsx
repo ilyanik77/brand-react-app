@@ -97,17 +97,17 @@ const Description = () => {
 								</summary>
 								<div className='sort__box'>
 									<div className='sort__check'>
-										<label for='sort__check1'>
+										<label htmlFor='sort__check1'>
 											<input name='sort__check1' type='checkbox' />
 											XS
 										</label>
-										<label for='sort__check2'>
+										<label htmlFor='sort__check2'>
 											<input name='sort__check2' type='checkbox' />S
 										</label>
-										<label for='sort__check3'>
+										<label htmlFor='sort__check3'>
 											<input name='sort__check3' type='checkbox' />M
 										</label>
-										<label for='sort__check4'>
+										<label htmlFor='sort__check4'>
 											<input name='sort__check4' type='checkbox' />L
 										</label>
 									</div>

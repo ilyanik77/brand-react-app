@@ -1,0 +1,22 @@
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	&__content {
+		height: 44px;
+		width: 284px;
+		margin-top: 48px;
+		margin-bottom: 96px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& svg.left {
+			margin-right: 17px;
+		}
+
+		& svg.right {
+			margin-left: 17px;
+		}
+	}
+}

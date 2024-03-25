@@ -1,10 +1,11 @@
 const Burger = () => {
 	return (
 		<>
-			<label for='burger'>
+			<label htmlFor='burger'>
 				<img src={'./../../img/menu.svg'} alt='menu' />
 			</label>
-			<input id='burger' name="burger" type='checkbox' />
+			<input id='burger' type='checkbox' />
+			
 		</>
 	)
 }
