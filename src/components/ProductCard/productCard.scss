@@ -1,0 +1,8 @@
+.product__item {
+	position: relative;
+	background: #f8f8f8;
+
+	&:hover .product__card-add {
+		display: block;
+	}
+}

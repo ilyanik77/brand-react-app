@@ -232,21 +232,21 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-    .container {
-        max-width: 768px;
-    }
+    
 
     .cart {
 
         &__content {
-            display: grid;
+            
+            display: flex;
+            flex-direction: column;
             margin: 0 16px;
-            grid-template-columns: 1fr;
         }
 
         &__form {
 
             margin-top: 0;
+            padding-left: 0;
            
 
             &-checkout {

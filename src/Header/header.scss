@@ -31,15 +31,21 @@
     align-items: center;
 }
 
-#burger {
-    position: absolute;
-    visibility: hidden;
-
-    &:checked ~ .menu__nav-1 {
-        opacity: 1;
-        pointer-events: all;
-    }
+.icon {
+    cursor: pointer;
+    color: #fff;
+    width: 35px;
 }
+
+// #burger {
+//     // position: absolute;
+//     // visibility: hidden;
+
+//     &:checked ~ .menu__nav-1 {
+//         opacity: 1;
+//         pointer-events: all;
+//     }
+// }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .header {
@@ -51,9 +57,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-    .container {
-        max-width: 375px;
-    }
+    // .container {
+    //     max-width: 375px;
+    // }
 
     .header {
 

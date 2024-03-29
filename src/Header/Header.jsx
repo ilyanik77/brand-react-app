@@ -1,25 +1,38 @@
 import Logo from '../components/Logo'
-import Search from '../components/Search'
 import ModalMenu from '../components/ModalMenu/ModalMenu'
 import './header.scss'
-import Burger from '../components/Burger'
-import RegistrationLink from '../components/RegistrationLink'
-import CartLink from '../components/CartLink'
+import { useState } from 'react'
+
+import data from './../data.js'
+
+import { RiSearchLine } from 'react-icons/ri'
+import { PiShoppingCart } from 'react-icons/pi'
+import { RxHamburgerMenu } from 'react-icons/rx'
+import { RxAvatar } from 'react-icons/rx'
+
 
 const Header = () => {
+
+    const [showMenu, setShowMenu] = useState(data.showMenu)
+
+		const onShowMenu = () => {
+			setShowMenu(!showMenu)
+			console.log(showMenu)
+		}
+
 	return (
 		<header className='header'>
 			<div className='header__content container'>
 				<div className='logo'>
 					<Logo />
-					<Search />
+					<RiSearchLine className='icon' />
 				</div>
 
 				<div className='menu__nav'>
-					<Burger />
-					<ModalMenu />
-					<RegistrationLink />
-					<CartLink />
+					<RxHamburgerMenu className='icon' onClick={() => onShowMenu()}/>
+					{showMenu && <ModalMenu />}
+					<RxAvatar className='icon' />
+					<PiShoppingCart className='icon' />
 				</div>
 			</div>
 		</header>

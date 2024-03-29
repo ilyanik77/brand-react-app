@@ -57,9 +57,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-	.container {
-		max-width: 375px;
-	}
+	
 
 	.catalog {
 		grid-template-columns: 1fr;
