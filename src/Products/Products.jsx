@@ -7,7 +7,7 @@ import ProductCard from '../components/ProductCard/ProductCard.jsx'
 const Products = () => {
 	const [products, setProducts] = useState(data)
 
-	const productsList = products.map(product => {
+	const productsList = data.products.map(product => {
 		return (
 			<ProductCard
 				product={product}

@@ -6,17 +6,14 @@ import './base.scss'
 //import { useState } from 'react'
 import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
-//import Registration from '../Registration/Registration'
-import Subscribe from '../Subscribe/Subscribe'
-import Cart from '../Cart/Cart'
-import Catalog from '../Catalog/Catalog'
-//import Products from '../Products/Products'
-//import Product from '../components/Product/Product'
-//import Filter from '../Filter/Filter'
-//import Feature from '../Feature/Feaure'
-//import Promo from '../Promo/Promo'
-//import Offer from '../Offer/Offer'
-//import Products from '../Products/Products'
+import PageCart from './Pages/PageCart'
+//import PageCatalog from './Pages/PageCatalog'
+//import PageProduct from './Pages/PageProduct'
+//import PageRegistration from './Pages/PageRegistration'
+//import Home from './Pages/Home'
+
+
+
 
 function App() {
 
@@ -26,17 +23,12 @@ function App() {
 		<div className='App'>
 			<>
 				<Header />
-                {/* <Filter /> */}
-                {/* <Promo /> */}
-                {/* <Offer /> */}
-                {/* <Products /> */}
-                {/* <Feature /> */}
-                <Catalog />
-                <Cart />
-                <Subscribe />
-                {/* <Products /> */}
-                {/* <Product /> */}
-                {/* <Registration /> */}
+                {/* <Home /> */}
+                {/* <PageProduct /> */}
+                {/* <PageRegistration /> */}
+                {/* <PageCatalog /> */}
+                <PageCart />
+                
 				<Footer />
 			</>
 		</div>

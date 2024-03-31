@@ -1,3 +1,4 @@
+import CartItem from '../components/CartItem/CartItem';
 import './cart.scss'
 
 const Cart = () => {
@@ -5,6 +6,7 @@ const Cart = () => {
 			<section className='cart'>
 				<div className='cart__content container'>
 					<div className='cart__items'>
+                        <CartItem />
 						<div className='cart__item'>
 							<img width='262px' src='img/product3.png' alt='product3' />
 							<div className='cart__info'>

@@ -17,7 +17,6 @@ const Header = () => {
 
 		const onShowMenu = () => {
 			setShowMenu(!showMenu)
-			console.log(showMenu)
 		}
 
 	return (
