@@ -1,0 +1,25 @@
+.search {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 400px;
+    border-radius: 10px;
+    background: #fff;
+    opacity: 0.8;
+    margin-left: 10px;
+    font-size: 16px;
+    
+
+    &-close {
+        position: absolute;
+        width: 32px;
+        right: 0;
+        opacity: 0.5;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+    }
+
+}

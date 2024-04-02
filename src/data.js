@@ -1,5 +1,7 @@
 const data = {
 	showMenu: false,
+	showSearch: false,
+	countProductsOnHomePage: 6,
 	products: [
 		{
 			id: 1,
@@ -132,7 +134,7 @@ const data = {
 			//priceTotal: 190000,
 		},
 	],
-    // cart: [],
+	// cart: [],
 	cart: [
 		{
 			id: 1,

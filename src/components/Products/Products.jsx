@@ -2,23 +2,25 @@ import './products.scss'
 import data from '../../data.js'
 import { useState } from 'react'
 
-import ProductCard from '../ProductCard/ProductCard.jsx'
+import { Link } from 'react-router-dom'
+
+import ProductItem from '../ProductItem/ProductItem.jsx'
 
 const Products = () => {
-	const [products, setProducts] = useState(data)
+	const [products] = useState(data.products)
+    const [count] = useState(data.countProductsOnHomePage)
 
-	const productsList = data.products.map(product => {
-		return (
-			<ProductCard
-				product={product}
-				key={product.id}
-				// deleteProduct={deleteProduct}
-				// increase={increase}
-				// decrease={decrease}
-				// changeValue={changeValue}
-			/>
-		)
-	})
+	const productsList = products
+		.slice(0, count)
+		.map(product => {
+			return (
+				<ProductItem
+					product={product}
+					key={product.id}
+					
+				/>
+			)
+		})
 
 	return (
 		<section className='products'>
@@ -27,15 +29,15 @@ const Products = () => {
 					<h2>Fetured Items</h2>
 					<p>Shop for items based on what we featured in this week</p>
 				</div>
-                
-				<div className='products__content__box'>
-                    {productsList}
-                </div>
+
+				<div className='products__content__box'>{productsList}</div>
 
 				<div className='button__box'>
-					<a className='button__link' href='catalog.html'>
-						Browse All Product
-					</a>
+					<Link to='/catalog'>
+						<a className='button__link' href='catalog.html'>
+							Browse All Product
+						</a>
+					</Link>
 				</div>
 			</div>
 		</section>
