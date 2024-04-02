@@ -1,6 +1,6 @@
-import Breadcrumbs from '../../Breadcumbs/Breadcrumbs'
-import Cart from '../../Cart/Cart'
-import Subscribe from '../../Subscribe/Subscribe'
+import Breadcrumbs from '../../components/Breadcumbs/Breadcrumbs'
+import Cart from '../../components/Cart/Cart'
+import Subscribe from '../../components/Subscribe/Subscribe'
 
 const PageCart = () => {
 	return (

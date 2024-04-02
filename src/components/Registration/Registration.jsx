@@ -1,6 +1,6 @@
 import './registration.scss'
-import FormRegistr from '../components/FormRegistr/FormRegistr';
-import LoyaltyProgram from '../components/LoyaltyProgram/LoyaltyProgram';
+import FormRegistr from '../FormRegistr/FormRegistr';
+import LoyaltyProgram from '../LoyaltyProgram/LoyaltyProgram';
 
 const Registration = () => {
     return (

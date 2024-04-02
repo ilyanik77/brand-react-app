@@ -1,8 +1,8 @@
 import './products.scss'
-import data from './../data.js'
+import data from '../../data.js'
 import { useState } from 'react'
 
-import ProductCard from '../components/ProductCard/ProductCard.jsx'
+import ProductCard from '../ProductCard/ProductCard.jsx'
 
 const Products = () => {
 	const [products, setProducts] = useState(data)

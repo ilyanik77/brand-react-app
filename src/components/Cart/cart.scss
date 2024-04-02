@@ -89,54 +89,7 @@
             }
         }
 
-        &-checkout {
-            background-color: #F5F3F3;
-            height: 214px;
-            margin-top: 57px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            
-            &__sub {
-                margin-top: 39px;
-                margin-right: 34px;
-                color: #4A4A4A;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-
-            &__grand {
-                margin-top: 12px;
-                margin-right: 34px;
-                margin-bottom: 39px;
-                color: #222;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-            }
-
-            & a {
-                background-color: #F16D7F;
-                padding: 15px 42px;
-                margin-right: 43px;
-                color: #FFF;
-                font-family: Lato;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-
-                &:hover {
-                    background-color: #E05C6E;
-                    transition: all 0.3s;
-
-                }
-            }
-
-        }
+        
     }
 
      

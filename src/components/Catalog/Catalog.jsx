@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import data from './../data.js'
-import ProductItem from '../components/ProductItem/ProductItem'
-import Pagination from '../components/Pagination/Pagination'
+import data from '../../data.js'
+import ProductItem from '../ProductItem/ProductItem.jsx'
+import Pagination from '../Pagination/Pagination.jsx'
 import './catalog.scss'
 
 const Catalog = () => {

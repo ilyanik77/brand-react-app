@@ -1,23 +1,21 @@
-import Logo from '../components/Logo'
-import ModalMenu from '../components/ModalMenu/ModalMenu'
+import Logo from '../Logo.jsx'
+import ModalMenu from '../ModalMenu/ModalMenu.jsx'
 import './header.scss'
 import { useState } from 'react'
 
-import data from './../data.js'
+import data from '../../data.js'
 
 import { RiSearchLine } from 'react-icons/ri'
 import { PiShoppingCart } from 'react-icons/pi'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { RxAvatar } from 'react-icons/rx'
 
-
 const Header = () => {
+	const [showMenu, setShowMenu] = useState(data.showMenu)
 
-    const [showMenu, setShowMenu] = useState(data.showMenu)
-
-		const onShowMenu = () => {
-			setShowMenu(!showMenu)
-		}
+	const onShowMenu = () => {
+		setShowMenu(!showMenu)
+	}
 
 	return (
 		<header className='header'>
@@ -28,7 +26,7 @@ const Header = () => {
 				</div>
 
 				<div className='menu__nav'>
-					<RxHamburgerMenu className='icon' onClick={() => onShowMenu()}/>
+					<RxHamburgerMenu className='icon' onClick={() => onShowMenu()} />
 					{showMenu && <ModalMenu />}
 					<RxAvatar className='icon' />
 					<PiShoppingCart className='icon' />
