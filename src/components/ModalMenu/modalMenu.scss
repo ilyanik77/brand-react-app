@@ -6,6 +6,16 @@
     position: absolute;
     top: 75px;
     z-index: 2;
+    // opacity: 1;
+    // transform: translate(-10px);
+    // visibility: hidden;
+    // transition: 0.3s;
+
+    // &.active {
+    //     transform: translate(0);
+    //     opacity: 1;
+    //     visibility: visible;
+    // }
 
     &__title {
         margin-left: 32px;

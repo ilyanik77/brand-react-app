@@ -17,9 +17,6 @@ const Header = ({searchValue, setSearchValue}) => {
 	const [showMenu, setShowMenu] = useState(data.showMenu)
 	const [showSearch, setShowSearch] = useState(data.showSearch)
 
-	const onShowMenu = () => {
-		setShowMenu(!showMenu)
-	}
 
 	const onShowSearch = () => {
 		setShowSearch(!showSearch)
@@ -40,7 +37,11 @@ const Header = ({searchValue, setSearchValue}) => {
 				</div>
 
 				<div className='menu__nav'>
-					<RxHamburgerMenu className='icon' onClick={() => onShowMenu()} />
+					
+					<RxHamburgerMenu
+						className='icon'
+						onClick={() => setShowMenu(!showMenu)}
+					/>
 					{showMenu && <ModalMenu />}
 
 					<Link to='/registration'>
@@ -50,7 +51,6 @@ const Header = ({searchValue, setSearchValue}) => {
 					<Link to='/cart'>
 						<PiShoppingCart className='icon' />
 					</Link>
-					{/* <PiShoppingCart className='icon' /> */}
 				</div>
 			</div>
 		</header>

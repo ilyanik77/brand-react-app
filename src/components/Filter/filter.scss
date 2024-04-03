@@ -17,7 +17,9 @@
     }
 
     &__details {
-        
+        //filter close
+        opacity: 0;
+        //
         box-sizing: border-box;
         padding: 13px 16px 16px;
         top: 39px;

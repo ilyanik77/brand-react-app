@@ -1,36 +1,54 @@
 import { useState } from 'react'
 import data from '../../data.js'
 import ProductCard from '../ProductCard/ProductCard.jsx'
-//import ProductItem from '../ProductItem/ProductItem.jsx'
-//import ProductAdd from '../ProductAdd/ProductAdd.jsx'
-import Pagination from '../Pagination/Pagination.jsx'
+import ReactPaginate from 'react-paginate'
+
+
 import './catalog.scss'
 
 const Catalog = () => {
-	const [products, setProducts] = useState(data.products)
+	const [products] = useState(data.products)
+    const [itemOffset, setItemOffset] = useState(0)
+    const [itemsPerPage] = useState(6)
 
-	const catalog = products.map(product => {
+
+    const endOffset = itemOffset + itemsPerPage
+	//console.log(`Loading items from ${itemOffset} to ${endOffset}`)
+    const pageCount = Math.ceil(products.length / itemsPerPage)
+
+    
+	const currentItems = products.slice(itemOffset, endOffset).map(product => {
 		return (
 			<>
-				<ProductCard
-					product={product}
-					key={product.id}
-					// deleteProduct={deleteProduct}
-					// increase={increase}
-					// decrease={decrease}
-					// changeValue={changeValue}
-				/>
-				
-				{/* <ProductAdd /> */}
+				<ProductCard product={product} key={product.id} />
 			</>
 		)
 	})
 
+	
+	const handlePageClick = event => {
+		const newOffset = (event.selected * itemsPerPage) % products.length
+		// console.log(
+		// 	`User requested page number ${event.selected}, which is offset ${newOffset}`
+		// )
+		setItemOffset(newOffset)
+	}
+
 	return (
 		<section className='catalog'>
 			<div className='catalog__content container'>
-				<div className='catalog__content__box'>{catalog}</div>
-				<Pagination />
+				<div className='catalog__content__box'>{currentItems}</div>
+				<ReactPaginate
+					className='paginate'
+					breakLabel='...'
+					nextLabel='next >'
+					
+					onPageChange={handlePageClick}
+					pageRangeDisplayed={8}
+					pageCount={pageCount}
+					previousLabel='< previous'
+					renderOnZeroPageCount={null}
+				/>
 			</div>
 		</section>
 	)
