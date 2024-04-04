@@ -12,6 +12,10 @@
         align-items: center;
         gap: 10px;
         margin-right: 28px;
+
+        & svg {
+            cursor: pointer;
+        }
     }
 
     &__heading {

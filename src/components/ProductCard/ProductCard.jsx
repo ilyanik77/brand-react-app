@@ -1,4 +1,4 @@
-import ProductAdd from '../ProductAdd/ProductAdd'
+//import ProductAdd from '../ProductAdd/ProductAdd'
 import ProductItem from '../ProductItem/ProductItem'
 import './productCard.scss'
 
@@ -10,7 +10,7 @@ const ProductCard = (props) => {
 		<div className='product__item'>
             <ProductItem product={props.product}/>
 			
-            <ProductAdd />
+            {/* <ProductAdd /> */}
 			
 		</div>
 	)

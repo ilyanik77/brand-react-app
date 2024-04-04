@@ -12,7 +12,7 @@ const FormSubscribe = () => {
 			<div className='subscribe__box'>
 				<form action='#'>
 					<p>
-						<input type='email' placeholder='Enter Your Email' />
+						<input id='email1' type='email' placeholder='Enter Your Email' />
 					</p>
 					<button type='submit'>Subscribe</button>
 				</form>

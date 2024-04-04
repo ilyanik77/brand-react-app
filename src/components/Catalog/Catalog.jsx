@@ -13,7 +13,6 @@ const Catalog = () => {
 
 
     const endOffset = itemOffset + itemsPerPage
-	//console.log(`Loading items from ${itemOffset} to ${endOffset}`)
     const pageCount = Math.ceil(products.length / itemsPerPage)
 
     
@@ -28,9 +27,6 @@ const Catalog = () => {
 	
 	const handlePageClick = event => {
 		const newOffset = (event.selected * itemsPerPage) % products.length
-		// console.log(
-		// 	`User requested page number ${event.selected}, which is offset ${newOffset}`
-		// )
 		setItemOffset(newOffset)
 	}
 
@@ -42,7 +38,6 @@ const Catalog = () => {
 					className='paginate'
 					breakLabel='...'
 					nextLabel='next >'
-					
 					onPageChange={handlePageClick}
 					pageRangeDisplayed={8}
 					pageCount={pageCount}
