@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import { Link } from 'react-router-dom'
 
-import ProductItem from '../ProductItem/ProductItem.jsx'
+import ProductCard from '../ProductCard/ProductCard.jsx'
 
 const Products = () => {
 	const [products] = useState(data.products)
@@ -14,7 +14,7 @@ const Products = () => {
 		.slice(0, count)
 		.map(product => {
 			return (
-				<ProductItem
+				<ProductCard
 					product={product}
 					key={product.id}
 					

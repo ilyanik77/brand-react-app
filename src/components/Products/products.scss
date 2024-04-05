@@ -50,7 +50,8 @@
     .products {
 
         .products__content__box {
-            
+           
+            grid-template-columns: repeat(2, 1fr);
             margin-bottom: 32px;
             padding-bottom: 0;
             gap: 16px;
@@ -68,9 +69,10 @@
 
         .products__content__box {
             
+            grid-template-columns: 1fr;
             margin-bottom: 40px;
             padding-bottom: 0;
-            gap: 16px;
+            gap: 25px;
         }
 
         .button__link {

@@ -1,7 +1,7 @@
 import './reset.scss'
 import './base.scss'
 
-import { Route, Routes, Link } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 //import data from './../data.js'
 
@@ -24,23 +24,13 @@ function App() {
 		<div className='App'>
 			<>
 				<Header searchValue={searchValue} setSearchValue={setSearchValue} />
-				<nav>
-					<ul>
-						<li>
-							<Link to='/'>Home</Link>
-						</li>
-						
-						<li>
-							<Link to='/product'>Product</Link>
-						</li>
-					</ul>
-				</nav>
+				
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/cart' element={<PageCart />} />
 					<Route path='/catalog' element={<PageCatalog />} />
 					<Route path='/registration' element={<PageRegistration />} />
-					<Route path='/product' element={<PageProduct />} />
+					<Route path='/product/:id' element={<PageProduct />} />
 				</Routes>
 
 				<Footer />

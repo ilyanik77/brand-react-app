@@ -8,13 +8,14 @@ import Sort from '../Sort/Sort'
 import './product.scss'
 import { useState } from 'react'
 
-const Product = () => {
+const Product = (props) => {
+	// const { img, title, price } = product
 
-    const[cart, setCart] =  useState(data.cart)
+	const [cart, setCart] = useState(data.cart)
 
 	const addProductInCart = product => {
 		setCart({ cart: [...cart, product] })
-		console.log(product)
+		console.log(cart)
 	}
 
 	return (
@@ -24,8 +25,8 @@ const Product = () => {
 			<div className='description__content container'>
 				<img
 					className='description__content__img'
-					src='img/product13.png'
-					alt='product13'
+					src={`./../img/${props.img}`}
+					alt='product'
 				/>
 				<div className='description__product'>
 					<h4>WOMEN COLLECTION</h4>
@@ -40,14 +41,14 @@ const Product = () => {
 						<path d='M63 0.786865H0V3.81225H63V0.786865Z' fill='#EF5B70' />
 					</svg>
 
-					<h3>MOSCHINO CHEAP AND CHIC</h3>
+					<h3>{props.title}</h3>
 					<p className='description__product__text'>
 						Compellingly actualize fully researched processes before proactive
 						outsourcing. Progressively syndicate collaborative architectures
 						before cutting-edge services. Completely visualize parallel core
 						competencies rather than exceptional portals.
 					</p>
-					<p className='description__product__price'>$561</p>
+					<p className='description__product__price'>{props.price}$</p>
 
 					<svg
 						width='642'
@@ -59,7 +60,7 @@ const Product = () => {
 						<path
 							d='M0.5 1.49829H641.5H0.5Z'
 							stroke='#EAEAEA'
-							stroke-linejoin='round'
+							strokeLinejoin='round'
 						/>
 					</svg>
 
@@ -67,7 +68,9 @@ const Product = () => {
 
 					<div className='description__button'>
 						<a
-							onClick={() => {addProductInCart()}}
+							onClick={() => {
+								addProductInCart()
+							}}
 							className='description__button__link'
 							href='!#'
 						>

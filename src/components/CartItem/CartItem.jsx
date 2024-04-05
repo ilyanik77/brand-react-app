@@ -41,7 +41,7 @@ const CartItem = ({
 				className='delete'
                 onClick={()=>{deleteProduct(id)}}
 				deleteProduct={deleteProduct}
-				// id={id}
+				id={id}
 			/>
 		</div>
 	)

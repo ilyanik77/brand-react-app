@@ -78,12 +78,9 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-	.catalog {
+	.catalog__content__box {
 		grid-template-columns: repeat(2, 1fr);
-
-		// .product__item:last-child {
-		// 	display: none;
-		// }
+        justify-items: center;
 
 		.pagination__content {
 			margin-top: 60px;
@@ -93,12 +90,9 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-	.catalog {
+	.catalog__content__box {
 		grid-template-columns: 1fr;
-
-		.product__item {
-			max-width: 100%;
-		}
+        justify-items: center;
 
 		.product__item:last-child {
 			display: none;
