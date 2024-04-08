@@ -1,13 +1,15 @@
 import { useState } from 'react'
-import data from '../../data.js'
 import ProductCard from '../ProductCard/ProductCard.jsx'
 import ReactPaginate from 'react-paginate'
+
+import { useSelector, useDispatch } from 'react-redux'
 
 
 import './catalog.scss'
 
 const Catalog = () => {
-	const [products] = useState(data.products)
+    const products = useSelector(state => state.catalog.products)
+	
     const [itemOffset, setItemOffset] = useState(0)
     const [itemsPerPage] = useState(6)
 
@@ -33,8 +35,11 @@ const Catalog = () => {
 	return (
 		<section className='catalog'>
 			<div className='catalog__content container'>
-				<div className='catalog__content__box'>{currentItems}</div>
+				<div className='catalog__content__box'>
+                    {currentItems}
+                </div>
 				<ReactPaginate
+					
 					className='paginate'
 					breakLabel='...'
 					nextLabel='next >'

@@ -1,88 +1,97 @@
 import CartItem from '../CartItem/CartItem.jsx'
 import './cart.scss'
 
-import data from '../../data.js'
-import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { clearCart } from './../../Redux/cartSlice'
+
+import { Link } from 'react-router-dom'
+
 import CartFooter from '../CartFooter/CartFooter.jsx'
 
 const Cart = () => {
-	const [cart, setCart] = useState(data.cart)
-	const [total, setTotal] = useState({
-		price: cart.reduce((prev, curr) => prev + curr.priceTotal, 0),
-		count: cart.reduce((prev, curr) => prev + curr.count, 0),
-	})
 
-	useEffect(() => {
-		setTotal({
-			price: cart.reduce((prev, curr) => prev + curr.priceTotal, 0),
-			count: cart.reduce((prev, curr) => prev + curr.count, 0),
-		})
-	}, [cart])
+    const cart = useSelector(state => state.cart.cart)
+	const dispatch = useDispatch()
+    console.log(cart);
 
-    const clearCart = () => {
-        setCart([])
-    }
 
-	const deleteProduct = id => {
-		setCart(cart => cart.filter(product => id !== product.id))
-	}
+	// const [cart, setCart] = useState(data.cart)
+	// const [total, setTotal] = useState({
+	// 	price: cart.reduce((prev, curr) => prev + curr.priceTotal, 0),
+	// 	count: cart.reduce((prev, curr) => prev + curr.count, 0),
+	// })
 
-	const increase = id => {
-		setCart(cart => {
-			return cart.map(product => {
-				if (product.id === id) {
-					return {
-						...product,
-						count: ++product.count,
-						priceTotal: product.count * product.price,
-					}
-				}
-				return product
-			})
-		})
-	}
+	// useEffect(() => {
+	// 	setTotal({
+	// 		price: cart.reduce((prev, curr) => prev + curr.priceTotal, 0),
+	// 		count: cart.reduce((prev, curr) => prev + curr.count, 0),
+	// 	})
+	// }, [cart])
 
-	const decrease = id => {
-		setCart(cart => {
-			return cart.map(product => {
-				if (product.id === id) {
-					const newCount = product.count - 1 > 1 ? --product.count : 1
+    // const clearCart = () => {
+    //     setCart([])
+    // }
 
-					return {
-						...product,
-						count: newCount,
-						priceTotal: newCount * product.price,
-					}
-				}
-				return product
-			})
-		})
-	}
+	// const deleteProduct = id => {
+	// 	setCart(cart => cart.filter(product => id !== product.id))
+	// }
 
-	const changeValue = (id, value) => {
-		setCart(cart => {
-			return cart.map(product => {
-				if (product.id === id) {
-					return {
-						...product,
-						count: value,
-						priceTotal: value * product.price,
-					}
-				}
-				return product
-			})
-		})
-	}
+	// const increase = id => {
+	// 	setCart(cart => {
+	// 		return cart.map(product => {
+	// 			if (product.id === id) {
+	// 				return {
+	// 					...product,
+	// 					count: ++product.count,
+	// 					priceTotal: product.count * product.price,
+	// 				}
+	// 			}
+	// 			return product
+	// 		})
+	// 	})
+	// }
+
+	// const decrease = id => {
+	// 	setCart(cart => {
+	// 		return cart.map(product => {
+	// 			if (product.id === id) {
+	// 				const newCount = product.count - 1 > 1 ? --product.count : 1
+
+	// 				return {
+	// 					...product,
+	// 					count: newCount,
+	// 					priceTotal: newCount * product.price,
+	// 				}
+	// 			}
+	// 			return product
+	// 		})
+	// 	})
+	// }
+
+	// const changeValue = (id, value) => {
+	// 	setCart(cart => {
+	// 		return cart.map(product => {
+	// 			if (product.id === id) {
+	// 				return {
+	// 					...product,
+	// 					count: value,
+	// 					priceTotal: value * product.price,
+	// 				}
+	// 			}
+	// 			return product
+	// 		})
+	// 	})
+	// }
 
 	const cartItems = cart.map(product => {
 		return (
 			<CartItem
 				product={product}
 				key={product.id}
-				deleteProduct={deleteProduct}
-				increase={increase}
-				decrease={decrease}
-				changeValue={changeValue}
+				// deleteProduct={deleteProduct}
+				// increase={increase}
+				// decrease={decrease}
+				// changeValue={changeValue}
 			/>
 		)
 	})
@@ -94,12 +103,16 @@ const Cart = () => {
 					{cartItems}
 
 					<div className='cart__button-box'>
-						<a onClick={clearCart} className='cart__button-link' href='/#'>
+						<button
+							onClick={() => {dispatch(clearCart())}}
+							className='cart__button-link'
+							href='/#'
+						>
 							CLEAR SHOPPING CART
-						</a>
-						<a className='cart__button-link' href='/#'>
+						</button>
+						<Link to={'/catalog'} className='cart__button-link'>
 							CONTINUE SHOPPING
-						</a>
+						</Link>
 					</div>
 				</div>
 
@@ -122,8 +135,9 @@ const Cart = () => {
 						</form>
 					</div>
 
-					<CartFooter total={total} />
-
+					<CartFooter
+					// total={total}
+					/>
 				</div>
 			</div>
 		</section>
