@@ -1,6 +1,6 @@
-const data = {
-	showMenu: false,
-	showSearch: false,
+import { createSlice } from '@reduxjs/toolkit'
+
+const initialState = {
 	countProductsOnHomePage: 6,
 	products: [
 		{
@@ -11,7 +11,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 52,
-			//priceTotal: 100000,
 		},
 		{
 			id: 2,
@@ -21,7 +20,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 51,
-			//priceTotal: 29000,
 		},
 		{
 			id: 3,
@@ -31,7 +29,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 35,
-			//priceTotal: 190000,
 		},
 		{
 			id: 4,
@@ -41,7 +38,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 48,
-			//priceTotal: 100000,
 		},
 		{
 			id: 5,
@@ -51,7 +47,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 29,
-			//priceTotal: 29000,
 		},
 		{
 			id: 6,
@@ -61,7 +56,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 19,
-			//priceTotal: 190000,
 		},
 		{
 			id: 7,
@@ -71,7 +65,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 100,
-			//priceTotal: 100000,
 		},
 		{
 			id: 8,
@@ -81,7 +74,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 29,
-			//priceTotal: 29000,
 		},
 		{
 			id: 9,
@@ -91,7 +83,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 90,
-			//priceTotal: 190000,
 		},
 		{
 			id: 10,
@@ -101,7 +92,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 69,
-			//priceTotal: 190000,
 		},
 		{
 			id: 11,
@@ -111,7 +101,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 70,
-			//priceTotal: 100000,
 		},
 		{
 			id: 12,
@@ -121,7 +110,6 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 49,
-			//priceTotal: 29000,
 		},
 		{
 			id: 13,
@@ -131,11 +119,16 @@ const data = {
 				'Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.',
 			count: 1,
 			price: 77,
-			//priceTotal: 190000,
 		},
 	],
-	
 }
 
+export const productsSlice = createSlice({
+	name: 'products',
+	initialState,
+	reducers: {},
+})
 
-export default data
+export const {} = productsSlice.actions
+
+export default productsSlice.reducer

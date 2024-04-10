@@ -3,12 +3,11 @@
     &__content {
 
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__items {
         
-        grid-column: 1/span 3;
         display: flex;
         flex-direction: column;
         margin-top: 96px;
@@ -39,60 +38,7 @@
         }
     }
 
-    &__form{
-        grid-column: 4/span 3;
-        padding-left: 120px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 96px;
-
-        &-get {
-            &__title {
-                width: 100%;
-                color: #222;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-                margin-bottom: 20px;
-            }
-
-            & input {
-                box-sizing: border-box;
-                width: 100%;
-                height: 45px;
-                margin-bottom: 20px;
-                padding: 0 17px;
-                color: #222;
-                font-size: 13px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-                border: 1px solid #A4A4A4;
-            }
-
-            &__button {
-                width: 101px;
-                height: 35px;
-                color: #4A4A4A;
-                font-size: 11px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-                border: 1px solid #A4A4A4;
-
-                &:hover {
-                    background-color: #F16D7F;
-                    color: #fff;
-                    transition: all 0.3s; 
-                }
-            }
-        }
-
-        
-    }
-
-     
+    
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -102,25 +48,6 @@
             display: flex;
             flex-direction: column;
             margin: 0 16px;
-        }
-
-        &__form {
-
-            margin-top: 0;
-            padding-left: 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-
-            &-checkout {
-                margin-top: 40px;
-            }
-
-            &-get__button {
-                margin-bottom: 128px;
-            }
-
-
         }
 
         &__items {
@@ -150,23 +77,6 @@
             margin: 0 16px;
         }
 
-        &__form {
-
-            margin-top: 0;
-            padding-left: 0;
-           
-
-            &-checkout {
-                margin-top: 40px;
-            }
-
-            &-get__button {
-                margin-bottom: 128px;
-            }
-
-
-        }
-
         &__items {
             min-width: 358px;
             margin-right: 0;
@@ -177,11 +87,6 @@
         &__item {
             min-width: 358px;
             min-height: 188px;
-        }
-
-        &__item img {
-            
-            min-width: 143px;
         }
 
         &__title {

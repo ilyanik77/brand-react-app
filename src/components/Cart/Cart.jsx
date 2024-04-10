@@ -5,8 +5,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { clearCart } from './../../Redux/cartSlice'
 
 import { Link } from 'react-router-dom'
-
-import CartFooter from '../CartFooter/CartFooter.jsx'
+import FormCard from '../FormCard/FormCard.jsx'
 
 const Cart = () => {
 
@@ -116,29 +115,8 @@ const Cart = () => {
 					</div>
 				</div>
 
-				<div className='cart__form'>
-					<div className='cart__form-get'>
-						<form action=''>
-							<h3 className='cart__form-get__title'>SHIPPING ADRESS</h3>
-							<p>
-								<input type='text' placeholder='Bangladesh' />
-							</p>
-							<p>
-								<input type='text' placeholder='State' />
-							</p>
-							<p>
-								<input type='text' placeholder='Postcode / Zip' />
-							</p>
-							<button className='cart__form-get__button' type='submit'>
-								GET A QUOTE
-							</button>
-						</form>
-					</div>
+                <FormCard />
 
-					<CartFooter
-					// total={total}
-					/>
-				</div>
 			</div>
 		</section>
 	)

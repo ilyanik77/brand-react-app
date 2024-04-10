@@ -1,26 +1,23 @@
 import './products.scss'
-import data from '../../data.js'
-import { useState } from 'react'
+import ProductCard from '../ProductCard/ProductCard.jsx'
+
+import { useSelector, useDispatch } from 'react-redux'
 
 import { Link } from 'react-router-dom'
 
-import ProductCard from '../ProductCard/ProductCard.jsx'
+
 
 const Products = () => {
-	const [products] = useState(data.products)
-    const [count] = useState(data.countProductsOnHomePage)
 
-	const productsList = products
-		.slice(0, count)
-		.map(product => {
-			return (
-				<ProductCard
-					product={product}
-					key={product.id}
-					
-				/>
-			)
-		})
+    const products = useSelector(state => state.products.products)
+    const count = useSelector(
+			state => state.products.countProductsOnHomePage
+		)
+    console.log(count);
+
+	const productsList = products.slice(0, count).map(product => {
+		return <ProductCard product={product} key={product.id} />
+	})
 
 	return (
 		<section className='products'>
