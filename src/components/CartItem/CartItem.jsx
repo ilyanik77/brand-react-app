@@ -1,21 +1,35 @@
 import { MdDeleteForever } from 'react-icons/md'
 import Count from '../Count/Count'
 import './cartItem.scss'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteProductFromCart } from '../../Redux/cartSlice'
 
 const CartItem = ({
 	product,
-	deleteProduct,
-	increase,
-	decrease,
 	changeValue,
 }) => {
 	const { img, title, price, count, id } = product
+    const dispatch = useDispatch()
+
+    const cart = useSelector(state => state.cart.cart)
+
+    const increase = id => {
+			return cart.map(product => {
+				if (product.id === id) {
+					return {
+						...product,
+						count: ++product.count,
+						priceTotal: product.count * product.price,
+					}
+				}
+				return product
+			})
+		}
 
 	return (
 		<div className='cart__item'>
 			<img
 				width='262px'
-				// src={'./../../img/' + props.product.img}
 				src={`./../../img/${img}`}
 				alt='{props.product.title}'
 			/>
@@ -32,15 +46,15 @@ const CartItem = ({
 						count={count}
 						id={id}
 						increase={increase}
-						decrease={decrease}
+						//decrease={decrease}
 						changeValue={changeValue}
 					/>
 				</div>
 			</div>
 			<MdDeleteForever
 				className='delete'
-                onClick={()=>{deleteProduct(id)}}
-				deleteProduct={deleteProduct}
+                onClick={()=>{dispatch(deleteProductFromCart(id))}}
+				//deleteProduct={deleteProduct}
 				id={id}
 			/>
 		</div>

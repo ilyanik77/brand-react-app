@@ -21,6 +21,7 @@ const Count = ({ count, increase, decrease, changeValue, id }) => {
 					className='count__up'
 					onClick={() => {
 						increase(id)
+                        console.log(id);
 					}}
 				>
 					<img src='./img/icon-up.svg' alt='Increase' />

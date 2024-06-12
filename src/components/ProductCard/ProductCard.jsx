@@ -1,9 +1,18 @@
-import { Link } from 'react-router-dom'
-//import ProductItem from '../ProductItem/ProductItem'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import './productCard.scss'
+import { setCurrentProductItem } from '../../Redux/productItemSlice'
 
 const ProductCard = ({ product }) => {
 	const { img, title, description, price, id } = product
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const handleClick = () => {
+			dispatch(setCurrentProductItem(product))
+			// history.push(`/app/${game.title}`)
+            navigate(`/product/${product.id}`)
+		}
 
 	return (
 		<div className='product__item'>
@@ -15,9 +24,9 @@ const ProductCard = ({ product }) => {
 				<div className='product__box'>
 					<p className='product__price'>${price}</p>
 					<Link
-						to={`/product/:${id}`}
+						to={`/product/${id}`}
 						className='product__btn'
-						onClick={() => console.log(product.id)}
+						onClick={handleClick}
 					>
 						More detailed...
 					</Link>

@@ -1,19 +1,23 @@
 import { useForm } from 'react-hook-form'
 import './formCard.scss'
 
-const FormCard = () => {
+const FormCard = (total) => {
+    const {price, count} = total
 
-    const {
-			register,
-			formState: { errors, isValid },
-			handleSubmit,
-			reset,
-		} = useForm({ mode: 'onBlur' })
+    // console.log(price)
+    // console.log(count)
 
-		const onSubmit = data => {
-			alert(JSON.stringify(data))
-			reset()
-		}
+	const {
+		register,
+		formState: { errors, isValid },
+		handleSubmit,
+		reset,
+	} = useForm({ mode: 'onBlur' })
+
+	const onSubmit = data => {
+		alert(JSON.stringify(data))
+		reset()
+	}
 
 	return (
 		<div className='cart__form'>
@@ -77,7 +81,8 @@ const FormCard = () => {
 						{/* <div className='cart-footer__count'>Quantity: {count} </div> */}
 						<div className='cart-footer__price'>
 							{/* {priceFormatter.format(price)} руб. */}
-							SUB TOTAL: ${/* SUB TOTAL: {priceFormatter.format(price)}$ */}
+							SUB TOTAL: {price}$
+							{/* SUB TOTAL: {priceFormatter.format(price)}$ */}
 						</div>
 						<button>PROCEED TO CHECKOUT</button>
 					</div>

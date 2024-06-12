@@ -1,7 +1,7 @@
 import './products.scss'
 import ProductCard from '../ProductCard/ProductCard.jsx'
 
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import { Link } from 'react-router-dom'
 
@@ -12,8 +12,7 @@ const Products = () => {
     const products = useSelector(state => state.products.products)
     const count = useSelector(
 			state => state.products.countProductsOnHomePage
-		)
-    console.log(count);
+		);
 
 	const productsList = products.slice(0, count).map(product => {
 		return <ProductCard product={product} key={product.id} />
